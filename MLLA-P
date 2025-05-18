@@ -1,0 +1,279 @@
+Great! Here’s the first batch of 50 Linear Algebra questions with their manual solutions, Python code, and output.
+
+---
+
+### Question 1:
+
+**Find the product of two matrices:**
+A = \[\[1, 2], \[3, 4]] and B = \[\[5, 6], \[7, 8]]
+
+**Manual Solution:**
+Multiply row elements of A by column elements of B and sum them:
+C\[0,0] = 1*5 + 2*7 = 5 + 14 = 19
+C\[0,1] = 1*6 + 2*8 = 6 + 16 = 22
+C\[1,0] = 3*5 + 4*7 = 15 + 28 = 43
+C\[1,1] = 3*6 + 4*8 = 18 + 32 = 50
+
+**Python Code:**
+
+```python
+import numpy as np
+A = np.array([[1, 2], [3, 4]])
+B = np.array([[5, 6], [7, 8]])
+C = np.dot(A, B)
+print(C)
+```
+
+**Output:**
+
+```
+[[19 22]
+ [43 50]]
+```
+
+---
+
+### Question 2:
+
+**Calculate the determinant of matrix:**
+A = \[\[4, 6], \[3, 8]]
+
+**Manual Solution:**
+Determinant = (4 \* 8) - (6 \* 3) = 32 - 18 = 14
+
+**Python Code:**
+
+```python
+import numpy as np
+A = np.array([[4, 6], [3, 8]])
+det = np.linalg.det(A)
+print(round(det))
+```
+
+**Output:**
+
+```
+14
+```
+
+---
+
+### Question 3:
+
+**Find eigenvalues of matrix:**
+A = \[\[2, 0], \[0, 3]]
+
+**Manual Solution:**
+Eigenvalues λ satisfy det(A - λI) = 0.
+Here, eigenvalues are simply diagonal elements 2 and 3.
+
+**Python Code:**
+
+```python
+import numpy as np
+A = np.array([[2, 0], [0, 3]])
+eigenvalues = np.linalg.eigvals(A)
+print(eigenvalues)
+```
+
+**Output:**
+
+```
+[2. 3.]
+```
+
+---
+
+### Question 4:
+
+**Compute the transpose of matrix:**
+A = \[\[1, 2, 3], \[4, 5, 6]]
+
+**Manual Solution:**
+Transpose swaps rows with columns:
+Aᵗ = \[\[1, 4], \[2, 5], \[3, 6]]
+
+**Python Code:**
+
+```python
+import numpy as np
+A = np.array([[1, 2, 3], [4, 5, 6]])
+transpose = A.T
+print(transpose)
+```
+
+**Output:**
+
+```
+[[1 4]
+ [2 5]
+ [3 6]]
+```
+
+---
+
+### Question 5:
+
+**Find the rank of matrix:**
+A = \[\[1, 2, 3], \[4, 5, 6], \[7, 8, 9]]
+
+**Manual Solution:**
+Rows are linearly dependent, rank = 2
+
+**Python Code:**
+
+```python
+import numpy as np
+A = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+rank = np.linalg.matrix_rank(A)
+print(rank)
+```
+
+**Output:**
+
+```
+2
+```
+
+---
+
+Let me know when you’re ready for the next 45 questions!
+
+
+---
+
+### Question 6:
+
+**Add two matrices:**
+A = \[\[1, 0], \[0, 1]] and B = \[\[2, 3], \[4, 5]]
+
+**Manual Solution:**
+Add corresponding elements:
+C = \[\[1+2, 0+3], \[0+4, 1+5]] = \[\[3, 3], \[4, 6]]
+
+**Python Code:**
+
+```python
+import numpy as np
+A = np.array([[1, 0], [0, 1]])
+B = np.array([[2, 3], [4, 5]])
+C = A + B
+print(C)
+```
+
+**Output:**
+
+```
+[[3 3]
+ [4 6]]
+```
+
+---
+
+### Question 7:
+
+**Subtract matrix B from A:**
+A = \[\[7, 8], \[9, 10]] and B = \[\[1, 2], \[3, 4]]
+
+**Manual Solution:**
+Subtract element-wise:
+C = \[\[7-1, 8-2], \[9-3, 10-4]] = \[\[6, 6], \[6, 6]]
+
+**Python Code:**
+
+```python
+import numpy as np
+A = np.array([[7, 8], [9, 10]])
+B = np.array([[1, 2], [3, 4]])
+C = A - B
+print(C)
+```
+
+**Output:**
+
+```
+[[6 6]
+ [6 6]]
+```
+
+---
+
+### Question 8:
+
+**Calculate the inverse of matrix:**
+A = \[\[4, 7], \[2, 6]]
+
+**Manual Solution:**
+Inverse of 2x2 matrix:
+1/det(A) \* \[\[d, -b], \[-c, a]]
+det(A) = (4*6) - (7*2) = 24 -14 = 10
+Inverse = (1/10) \* \[\[6, -7], \[-2, 4]] = \[\[0.6, -0.7], \[-0.2, 0.4]]
+
+**Python Code:**
+
+```python
+import numpy as np
+A = np.array([[4, 7], [2, 6]])
+inv = np.linalg.inv(A)
+print(inv)
+```
+
+**Output:**
+
+```
+[[ 0.6 -0.7]
+ [-0.2  0.4]]
+```
+
+---
+
+### Question 9:
+
+**Find the dot product of vectors:**
+a = \[1, 2, 3] and b = \[4, 5, 6]
+
+**Manual Solution:**
+Dot product = 1*4 + 2*5 + 3\*6 = 4 + 10 + 18 = 32
+
+**Python Code:**
+
+```python
+import numpy as np
+a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+dot_product = np.dot(a, b)
+print(dot_product)
+```
+
+**Output:**
+
+```
+32
+```
+
+---
+
+### Question 10:
+
+**Calculate norm (magnitude) of vector:**
+a = \[3, 4]
+
+**Manual Solution:**
+Norm = √(3² + 4²) = √(9 +16) = √25 = 5
+
+**Python Code:**
+
+```python
+import numpy as np
+a = np.array([3, 4])
+norm = np.linalg.norm(a)
+print(norm)
+```
+
+**Output:**
+
+```
+5.0
+```
+
+---
